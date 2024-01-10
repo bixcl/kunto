@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    My Document
+{% endblock %}
+
+
+{% block body %}
+<body style="
+background: url('https://images.unsplash.com/photo-1468657988500-aca2be09f4c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat;
+background-size: cover;">
+
+      <div class="position-absolute top-50 start-50 translate-middle">
+        <center>
+        <h1><form action="/MyDocument" method="GET" class="font" style="font-size: 30px; text-shadow: 5px 5px 10px black;">DAY {{ dayCount }}</form></h1>
+        <br>
+
+            <form action="/ADD" method="POST" class="row g-3">
+                <h1>what was your biggest achivment today?</h1>
+                <!--<input style="height:1" type="text" class="form-control" name="bigAchive"  placeholder="Enter your biggest achivment today">-->
+                <textarea style="font-size:10px;" name="big"  placeholder="Enter your biggest achivment today"></textarea>
+                <h1>what was your achivments today?</h1>
+                <textarea style="font-size:10px;" name="achive"  placeholder="Enter your achivment today"></textarea>
+                <h1>what are the problem you face and could not solve?</h1>
+                <textarea style="font-size:10px;" name="problem"  placeholder="Enter the problem"></textarea>
+                <h1>what are the problem you face and solve?</h1>
+                <textarea style="font-size:10px;" name="problemsolve"  placeholder="Enter the problem"></textarea>
+                <input type="submit" value="ADD" name="ADD" class="btn btn-primary mb-3" style="font-size:15px; background-color: #e26d0c; border-width: 0px">
+            </form>
+            <form action="/RESTART" method="POST">
+                <input type="submit" value="RESTART" id="restart" name="restart" class="btn btn-primary mb-3" style="font-size:15px; background-color: white; color: #e26d0c; border-width: 0px">
+                <script>
+                    const button = document.getElementById('restart');
+
+                    button.addEventListener('click', function() {
+                    alert('you will lose all your progress');
+                    });
+                </script>
+            </form>
+        </center>
+            {% for row in rows %}
+                <p>{{ achive2 }}</p>
+            {% endfor %}
+    </div>
+</body>
+
+{% endblock %}

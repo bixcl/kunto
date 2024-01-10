@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+
+{% block body %}
+    <!--<center>
+        <form action="/login" method="post">
+            <input autocomplete="off" autofocus name="username" placeholder="username" type="text">
+            <input autocomplete="off" autofocus name="password" placeholder="password" type="password">
+            <butten type="butten">Login</butten>
+        </form>
+    </center>-->
+<body style="
+background: url('https://plus.unsplash.com/premium_photo-1678566111481-8e275550b700?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80') no-repeat;
+background-size: cover;">
+    <div class="position-absolute top-50 start-50 translate-middle">
+        <center>
+        <form action="/login" method="post">
+            <!--<div class="mb-3">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text">
+            </div>-->
+            <h1 style="color:#EADBC8; text-shadow: 5px 5px 10px black;">{{ Place1 }}</h1>
+            <br>
+            <div class="input-group input-group-lg">
+                <span class="input-group-text" id="inputGroup-sizing-lg">username</span>
+                <input name="username" id="username" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+
+            </div>
+            <br>
+            <div class="input-group input-group-lg">
+                <span class="input-group-text" id="inputGroup-sizing-lg">password</span>
+                <input type="password" name="password" id="password" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+            </div>
+            <br>
+            <p style=" font-size:20px;">You are not registerd? <a href="/register" style="color:#e26d0c; text-shadow: 3px 3px 4px black;">Register now</a></p>
+            <!--<div class="mb-3">
+                <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
+            </div>-->
+            <button class="btn btn-primary border border-success p-2 border-opacity-10" type="submit" style="background: #e26d0c; font-size: 20px; width: 100px;border-radius: 10px;">Log In</button>
+        </form>
+        </center>
+    </div>
+</body>
+{% endblock %}

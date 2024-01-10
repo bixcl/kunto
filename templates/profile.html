@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Profile
+{% endblock %}
+
+
+{% block body %}
+<style>
+    .font {
+        font-family: "Lucida Console", "Courier New", monospace;";
+    }
+</style>
+<body style="
+        background: url('https://images.unsplash.com/photo-1616366071248-7ce95824d3c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80') no-repeat;
+        background-size: cover;">
+<div style=" margin-top:100px;">
+<center>
+            <br><br><br><br>
+            <h3 class="font" style="font-size: 50px; color: #e26d0c;">
+                Hello {{ username1 }}
+            </h3>
+            <p style="font-size:15px;color:#EADBC8; text-shadow: 5px 5px 10px black;">{{ place1 }}</p>
+            <br>
+            <form action="/changeUser" method="post">
+                <p style="font-size: 15px;">Change Username</p>
+                <input type="text" name="username" placeholder=" Enter new username" style="margin-right:20px; border-radius: 8px;font-size:15px;height:30px; width:300px;">
+                <input type="submit" name="submit" value="change username" style="border-radius: 8px; background-color:#e26d0c; color:white; font-size:15px;width:130px; height:30px">
+            </form>
+            <br>
+            <form action="/changePass" method="post">
+                <p style="font-size: 15px;">Change Password</p>
+                <input type="text" name="password" placeholder=" Enter new password" style="margin-right:20px; border-radius: 8px; font-size:15px;height:30px; width:300px;">
+                <input type="submit" name="submit" value="change password" style="border-radius: 8px; background-color:#e26d0c; color:white; font-size:15px;width:130px; height:30px">
+            </form>
+            <br><br>
+            <p style="font-size:20px;">Number of days : {{ DayNum }}</p>
+
+
+        </center>
+    </div>
+
+</body>
+{% endblock %}

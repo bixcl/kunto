@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Profile
+{% endblock %}
+
+
+{% block body %}
+<style>
+    .font {
+        font-family: "Lucida Console", "Courier New", monospace;";
+    }
+</style>
+<body style="
+        background: url('https://images.unsplash.com/photo-1616366071248-7ce95824d3c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80') no-repeat;
+        background-size: cover;">
+<div class="position-absolute top-50 start-50 translate-middle">
+<center>
+    <form action="/history" method="post">
+        <p style="font-size:20px;">Number of days : {{ DayNum }}</p>
+        <input type="text" name="Day1" placeholder=" Enter The Day number" style="margin-right:20px; border-radius: 8px; font-size:15px;height:30px; width:300px;">
+        <input type="submit" name="submit" value="Request Data" style="border-radius: 8px; background-color:#e26d0c; color:white; font-size:15px;width:130px; height:30px">
+    </form>
+        <div>
+            <p style="font-size:20px; color:#e26d0c;">this was your achivment in day <p style="color:white;">{{ Day }}</p> </p>
+            <p style="font-size:15px; color:#e26d0c;">your big achivment : <p style="color:white;">{{ big }}</p> </p>
+            <p style="font-size:15px; color:#e26d0c;">your achivment : <p style="color:white;">{{ ashive }}</p> </p>
+            <p style="font-size:15px; color:#e26d0c;">the problem you face : <p style="color:white;">{{ problem }}</p> </p>
+            <p style="font-size:15px; color:#e26d0c;">the problem you face and solve : <p style="color:white;">{{ problemsolve }}</p> </p>
+        </div>
+
+</center></div>
+</body>
+{% endblock %}

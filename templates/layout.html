@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="X-UA-compatible" content="IE=edge">
+        <meta charset="utf-8">
+        <!--Bootsrap-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        <!--css-->
+        <link href="/static/style.css" rel="stylesheet">
+        <!--box icon-->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <!--page title-->
+        <title>{% block title %}{% endblock %}</title>
+        <style>
+            .font {
+                font-family: "Lucida Console", "Courier New", monospace;";
+            }
+        </style>
+
+    </head>
+    <body>
+        <header class="header" style="text-shadow: 5px 5px 10px black;">
+            <a href="/" class="logo">Kunto.</a>
+            <!--navigator bar-->
+            <dev class='bx bx-menu' id="menu-icon"></dev>
+            <nav class="navbar">
+                <a href="/" class="active">Home</a>
+                <!--<a href="/MyDocument">My Document</a>-->
+                <a href="/profile">Profile</a>
+                <a href="/MyDocument">My Document</a>
+                <a href="/history">History</a>
+                {% if session["user_id"] %}
+                    <a href="/logout">logout</a>
+                {% endif %}
+
+            </nav>
+
+        </header>
+        <!--pages-->
+        {% block body %}{% endblock %}
+    </body>
+</html>

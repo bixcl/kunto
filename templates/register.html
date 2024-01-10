@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+
+{% block body %}
+
+<body style="
+background: url('https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80') no-repeat;
+background-size: cover;">
+    <div class="position-absolute top-50 start-50 translate-middle">
+        <center>
+        <form action="/register" method="post">
+            <!--<div class="input-group input-group-lg">
+                <span class="input-group-text" id="inputGroup-sizing-lg">name</span>
+                <input type="text" class="form-control" name="name" id="name" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+            </div>
+            <br>-->
+            <h1 style="color:#EADBC8; text-shadow: 5px 5px 10px black;">{{ Place1 }}</h1>
+            <br>
+            <div class="input-group input-group-lg">
+                <span class="input-group-text" id="username">username</span>
+                <input type="text" name="username" id="username" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+            </div>
+            <br>
+            <div class="input-group input-group-lg">
+                <span class="input-group-text" id="inputGroup-sizing-lg">password</span>
+                <input type="password" name="password" id="password" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+            </div>
+            <br>
+            <div class="input-group input-group-lg">
+                <span class="input-group-text" id="inputGroup-sizing-lg">Confirmation</span>
+                <input type="password" name="confir" id="confir" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+            </div>
+            <br>
+            <p style=" font-size:20px;">You are registerd? <a href="/login" style="color:#e26d0c; text-shadow: 3px 3px 4px black;">Login</a></p>
+            <button class="btn btn-primary border border-success p-2 border-opacity-10" type="submit" style="background: #e26d0c;font-size: 20px;width: 100px;border-radius: 10px;">Register</button>
+        </form>
+        </center>
+    </div>
+</body>
+{% endblock %}

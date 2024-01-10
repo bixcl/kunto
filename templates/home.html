@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home sweet Home
+{% endblock %}
+{% block body %}
+<style>
+    .font {
+        font-family: "Lucida Console", "Courier New", monospace;";
+    }
+    .font1 {
+        font-family: Georgia, serif;
+    }
+</style>
+<body style="
+        background: url('https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat;
+        background-size: cover;">
+
+            <!--<div class="position-absolute top-50 start-50 translate-middle">
+                <h1 class="font" style="font-size: 60px;">
+                    DAY {{ dayCount }}
+                </h1>
+                <br>
+                    <form action="/MyDocument" method="post" class="row g-3">
+                        <div class="col-auto">
+                        <input type="text" class="form-control" name="TheAchive" id="TheAchive" placeholder="Enter ur achivment">
+                        </div>
+                        <div class="col-auto">
+                        <button type="submit" class="btn btn-primary mb-3">ِADD</button>
+                        </div>
+                        <h1>Previous Days</h1>
+                        {% for row in rows %}
+                            <p></p>{{ achive2 }}</p>
+                        {% endfor %}
+                    </form>
+
+            </div>-->
+            <div class="position-absolute top-50 start-50 translate-middle">
+                <center>
+                    <h1 style="font-size:50px;" class="font">Welcome to Kunto</h1>
+                <br>
+                <h4 class="font" style="font-size: 20px; color: #e26d0c;">
+                    100 Day of code challenge
+                </h4>
+                <br>
+
+                <form action="/" method="post">
+                    {% if not session["user_id"] %}
+                    <butten type="button" name="login" class="btn btn-dark" style="font-size: 30px;color: #e26d0c; background-color: #000000; border-width: 0px; border-radius: 10px; width: 150px;">
+                        <a href="/login" style="color: white; ">login</a>
+                    </butten>
+                    <butten type="button" name="register" class="btn btn-dark" style="font-size: 30px;color: #ffffff; background-color: #e26d0c; margin-left: 40px; #000000; border-width: 0px; border-radius: 10px;width: 150px;">
+                        <a href="/register" style="color: white;">register</a>
+                    </butten>
+                    {% endif %}
+                </form>
+
+            </center>
+            </div>
+
+</body>
+{% endblock %}
